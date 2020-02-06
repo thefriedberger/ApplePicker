@@ -7,6 +7,10 @@ TagManager:
   - difficultyButton
   - startButton
   - Apple
+  - Easy
+  - Normal
+  - Hard
+  - Impossible
   layers:
   - Default
   - TransparentFX

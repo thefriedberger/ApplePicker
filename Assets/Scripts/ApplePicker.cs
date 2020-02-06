@@ -42,7 +42,7 @@ public class ApplePicker : MonoBehaviour
         Destroy(tBasketGO);
 
         if(basketList.Count == 0) {
-            SceneManager.LoadScene("__apple_picker");
+            SceneManager.LoadScene("__end_screen");
         }
     }
 }

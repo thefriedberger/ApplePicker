@@ -5,7 +5,7 @@ using UnityEngine;
 public class AppleTree : MonoBehaviour
 {
     public GameObject applePrefab;
-
+    public int difficulty = 1;
     public float speed = 1f;
     public float leftAndRightEdge = 10f;
     public float chanceToChangeDirections = 0.1f;
@@ -15,6 +15,20 @@ public class AppleTree : MonoBehaviour
     void Start()
     {
         Invoke("DropApple", 2f);
+        if(difficulty < 1) {
+            difficulty = 1;
+        } else if (difficulty == 2) {
+            speed = 5f;
+            secondsBetweenAppleDrops = 0.75f;
+        } else if (difficulty == 3) {
+            speed = 10f;
+            chanceToChangeDirections = 0.15f;
+            secondsBetweenAppleDrops = 0.5f;
+        } else {
+            speed = 20f;
+            chanceToChangeDirections = 0.2f;
+            secondsBetweenAppleDrops = 0.25f;
+        }
     }
 
     // Update is called once per frame
